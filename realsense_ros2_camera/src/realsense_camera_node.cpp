@@ -140,11 +140,11 @@ public:
     _unit_step_size[INFRA2] = sizeof(uint8_t);         // sensor_msgs::ImagePtr row step size
     _stream_name[INFRA2] = "infra2";
 
-    // Types for color stream
+    // Types for color stream/
     _format[COLOR] = RS2_FORMAT_RGB8;           // libRS type
-    _image_format[COLOR] = CV_8UC3;            // CVBridge type
-    _encoding[COLOR] = sensor_msgs::image_encodings::RGB8;         // ROS message type
-    _unit_step_size[COLOR] = 3;         // sensor_msgs::ImagePtr row step size
+    _image_format[COLOR] = CV_16UC3;            // CVBridge type
+    _encoding[COLOR] = sensor_msgs::image_encodings::RGB16;         // ROS message type
+    _unit_step_size[COLOR] = 3;         / sensor_msgs::ImagePtr row step size
     _stream_name[COLOR] = "color";
 
     // Types for fisheye stream
